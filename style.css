@@ -82,6 +82,24 @@ header {
     transform: scale(1.03);
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 50px 100px;
+}
+
+.gallery-item {
+    display: block;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+
 /* CONTENT PAGES */
 
 .content {
