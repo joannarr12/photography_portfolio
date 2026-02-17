@@ -5,7 +5,7 @@ body {
     color: #111;
 }
 
-/* Header */
+/* HEADER */
 
 header {
     text-align: center;
@@ -40,20 +40,15 @@ header {
     opacity: 0.6;
 }
 
-/* FILTER NAVIGATION */
-
-.filter-nav {
-    background: #f5f1e8;
-    padding: 15px 0;
-}
+/* FILTER NAV */
 
 .filter-nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 0;
-    margin: 0;
     gap: 25px;
+    padding: 20px 0;
+    margin: 0;
 }
 
 .filter-nav li {
@@ -66,7 +61,7 @@ header {
     border-bottom: 1px solid black;
 }
 
-/* GALLERY GRID (OFFICIAL CSS GRID USAGE) */
+/* GALLERY GRID */
 
 .gallery {
     display: grid;
@@ -74,8 +69,6 @@ header {
     gap: 25px;
     padding: 50px 100px;
 }
-
-/* STANDARD IMAGE SIZE */
 
 .gallery-item img {
     width: 100%;
@@ -87,6 +80,24 @@ header {
 
 .gallery-item img:hover {
     transform: scale(1.03);
+}
+
+/* CONTENT PAGES */
+
+.content {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.text-block h2 {
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.text-block p {
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
 /* TABLE PAGE */
@@ -105,21 +116,4 @@ th, td {
 
 th {
     background-color: #eae3d2;
-}
-
-
-.content {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-.text-block h2 {
-    font-weight: normal;
-    letter-spacing: 2px;
-}
-
-.text-block p {
-    line-height: 1.8;
-    margin-bottom: 20px;
 }

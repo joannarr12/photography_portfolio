@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function () {
+
 const images = [
     { src: "images/photo1.jpg", categories: ["blue"] },
     { src: "images/photo2.jpg", categories: ["green"] },
@@ -8,14 +10,12 @@ const images = [
     { src: "images/photo7.jpg", categories: ["orange"] },
     { src: "images/photo8.jpg", categories: ["purple"] },
     { src: "images/photo9.jpg", categories: ["blue"] },
-    { src: "images/photo10.jpg", categories: ["green"] },
-    // Add up to 30 easily here
+    { src: "images/photo10.jpg", categories: ["green"] }
 ];
 
 const gallery = document.getElementById("gallery");
 const filters = document.querySelectorAll(".filter-nav li");
 
-/* Shuffle on refresh */
 function shuffle(array) {
     return array.sort(() => Math.random() - 0.5);
 }
@@ -28,7 +28,11 @@ function renderGallery(filter) {
         if (filter === "all" || image.categories.includes(filter)) {
             const div = document.createElement("div");
             div.classList.add("gallery-item");
-            div.innerHTML = `<img src="${image.src}" loading="lazy">`;
+
+            div.innerHTML = `
+                <img src="${image.src}" loading="lazy" alt="">
+            `;
+
             gallery.appendChild(div);
         }
     });
@@ -36,10 +40,12 @@ function renderGallery(filter) {
 
 filters.forEach(button => {
     button.addEventListener("click", () => {
-        document.querySelector(".active").classList.remove("active");
+        document.querySelector(".filter-nav .active").classList.remove("active");
         button.classList.add("active");
         renderGallery(button.dataset.filter);
     });
 });
 
 renderGallery("all");
+
+});
