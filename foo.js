@@ -1,12 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 const images = [
-    { src: "images/photo1.jpg", categories: ["blue"] },
-    { src: "images/photo2.jpg", categories: ["green"] },
-    { src: "images/photo3.jpg", categories: ["red"] },
-    { src: "images/photo4.jpg", categories: ["pink"] },
-    { src: "images/photo5.jpg", categories: ["bw"] },
-    { src: "images/photo6.jpg", categories: ["yellow"] },
+    { src: "images/photo1.png", categories: ["blue"] },
+    { src: "images/photo2.png", categories: ["green"] },
+    { src: "images/photo3.png", categories: ["red"] },
+    { src: "images/photo4.png", categories: ["pink"] },
+    { src: "images/photo5.png", categories: ["bw"] },
+    { src: "images/photo6.png", categories: ["yellow"] },
+        { src: "images/photo7.png", categories: ["yellow"] },
+            { src: "images/photo8.png", categories: ["yellow"] },
+                { src: "images/photo9.png", categories: ["yellow"] },
+                    { src: "images/photo10.png", categories: ["yellow"] },
+
+
+
+
 ];
 
 const gallery = document.getElementById("gallery");
