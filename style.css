@@ -70,6 +70,10 @@ header p {
     break-inside: avoid;
     margin-bottom: 15px;
     position: relative;
+        width: 100%;
+    height: auto;
+    max-height: 600px; /* prevents giant vertical images */
+    object-fit: cover;
 }
 
 .gallery-item img {
