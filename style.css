@@ -1,24 +1,97 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: red;
+    font-family: "Times New Roman", serif;
+    background-color: #f5f1e8; /* elegant beige */
+    color: #111;
 }
+
+/* Header */
 
 header {
-    padding: 40px;
-    background: black;
-    color: white;
+    text-align: center;
+    padding: 40px 20px 10px;
 }
+
+header h1 {
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Navigation */
+
+.top-nav {
+    position: sticky;
+    top: 0;
+    background: #f5f1e8;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    z-index: 100;
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.top-nav li {
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.top-nav li:hover {
+    opacity: 0.6;
+}
+
+.top-nav li.active {
+    border-bottom: 1px solid black;
+}
+
+/* Pinterest Masonry Layout */
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 20px;
+    column-count: 4;
+    column-gap: 15px;
+    padding: 30px 80px;
 }
 
-.gallery img {
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.gallery-item img {
     width: 100%;
-    height: auto;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+    .gallery { column-count: 3; }
+}
+
+@media (max-width: 800px) {
+    .gallery { column-count: 2; }
+}
+
+@media (max-width: 500px) {
+    .gallery { column-count: 1; padding: 20px; }
 }
