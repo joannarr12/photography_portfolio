@@ -1,26 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Photography</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Joanna Raymond Ruiz | Portfolio</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <header>
-        <h1>Joanna Raymond Ruiz</h1>
-        <p>Photography Portfolio</p>
-    </header>
+<header>
+    <h1>Joanna Raymond Ruiz</h1>
+    <p>Photography Portfolio</p>
+</header>
 
-    <h1>Portfolio!
-    
-    </h1>
+<!-- MAIN SITE NAVIGATION -->
+<nav class="main-nav">
+    <ul>
+        <li><a href="index.html">Gallery</a></li>
+        <li><a href="exhibition.html">Exhibition</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
 
-    <script src="foo.js"></script>
-    <section class="gallery">
-        <img src="images/photo1.png" alt="Photo 1">
-        <img src="images/photo2.png" alt="Photo 2">
-        <img src="images/photo3.png" alt="Photo 3">
-    </section>
+<!-- COLOR FILTER NAVIGATION -->
+<nav class="filter-nav">
+    <ul>
+        <li data-filter="all" class="active">All</li>
+        <li data-filter="blue">Blue</li>
+        <li data-filter="green">Green</li>
+        <li data-filter="yellow">Yellow</li>
+        <li data-filter="orange">Orange</li>
+        <li data-filter="red">Red</li>
+        <li data-filter="purple">Purple</li>
+        <li data-filter="pink">Pink</li>
+        <li data-filter="bw">Black & White</li>
+    </ul>
+</nav>
+
+<section class="gallery" id="gallery"></section>
+
+<script src="js/gallery.js"></script>
 
 </body>
 </html>
