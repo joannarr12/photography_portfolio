@@ -7,10 +7,6 @@ const images = [
     { src: "images/photo4.jpg", categories: ["pink"] },
     { src: "images/photo5.jpg", categories: ["bw"] },
     { src: "images/photo6.jpg", categories: ["yellow"] },
-    { src: "images/photo7.jpg", categories: ["orange"] },
-    { src: "images/photo8.jpg", categories: ["purple"] },
-    { src: "images/photo9.jpg", categories: ["blue"] },
-    { src: "images/photo10.jpg", categories: ["green"] }
 ];
 
 const gallery = document.getElementById("gallery");
