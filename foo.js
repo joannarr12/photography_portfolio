@@ -2,25 +2,24 @@ const images = [
     { src: "images/photo1.jpg", categories: ["blue"] },
     { src: "images/photo2.jpg", categories: ["green"] },
     { src: "images/photo3.jpg", categories: ["red"] },
-    { src: "images/photo4.jpg", categories: ["pink", "purple"] },
+    { src: "images/photo4.jpg", categories: ["pink"] },
     { src: "images/photo5.jpg", categories: ["bw"] },
     { src: "images/photo6.jpg", categories: ["yellow"] },
     { src: "images/photo7.jpg", categories: ["orange"] },
-    { src: "images/photo8.jpg", categories: ["blue", "green"] },
-    { src: "images/photo9.jpg", categories: ["purple"] },
-    { src: "images/photo10.jpg", categories: ["red"] },
-    // Add up to 30 here easily
+    { src: "images/photo8.jpg", categories: ["purple"] },
+    { src: "images/photo9.jpg", categories: ["blue"] },
+    { src: "images/photo10.jpg", categories: ["green"] },
+    // Add up to 30 easily here
 ];
 
 const gallery = document.getElementById("gallery");
-const filters = document.querySelectorAll(".top-nav li");
+const filters = document.querySelectorAll(".filter-nav li");
 
-/* Shuffle function */
+/* Shuffle on refresh */
 function shuffle(array) {
     return array.sort(() => Math.random() - 0.5);
 }
 
-/* Render images */
 function renderGallery(filter) {
     gallery.innerHTML = "";
     let shuffled = shuffle([...images]);
@@ -29,15 +28,12 @@ function renderGallery(filter) {
         if (filter === "all" || image.categories.includes(filter)) {
             const div = document.createElement("div");
             div.classList.add("gallery-item");
-
-            div.innerHTML = `<img src="${image.src}" alt="">`;
-
+            div.innerHTML = `<img src="${image.src}" loading="lazy">`;
             gallery.appendChild(div);
         }
     });
 }
 
-/* Navigation Click */
 filters.forEach(button => {
     button.addEventListener("click", () => {
         document.querySelector(".active").classList.remove("active");
@@ -46,5 +42,4 @@ filters.forEach(button => {
     });
 });
 
-/* Initial Load */
 renderGallery("all");

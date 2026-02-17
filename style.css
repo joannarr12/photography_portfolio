@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: "Times New Roman", serif;
-    background-color: #f5f1e8; /* elegant beige */
+    background-color: #f5f1e8;
     color: #111;
 }
 
@@ -12,90 +12,114 @@ header {
     padding: 40px 20px 10px;
 }
 
-header h1 {
-    font-weight: 400;
+/* MAIN NAVIGATION */
+
+.main-nav {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #f5f1e8;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px 0;
+    margin: 0;
+    gap: 40px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
     letter-spacing: 2px;
 }
 
-header p {
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
-/* Navigation */
-
-.top-nav {
-    position: sticky;
-    top: 0;
-    background: #f5f1e8;
-    padding: 15px 0;
-    border-bottom: 1px solid #ddd;
-    z-index: 100;
-}
-
-.top-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 0;
-    margin: 0;
-}
-
-.top-nav li {
-    cursor: pointer;
-    font-size: 14px;
-    letter-spacing: 1px;
-    transition: 0.3s;
-}
-
-.top-nav li:hover {
+.main-nav a:hover {
     opacity: 0.6;
 }
 
-.top-nav li.active {
+/* FILTER NAVIGATION */
+
+.filter-nav {
+    background: #f5f1e8;
+    padding: 15px 0;
+}
+
+.filter-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 25px;
+}
+
+.filter-nav li {
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.filter-nav li.active {
     border-bottom: 1px solid black;
 }
 
-/* Pinterest Masonry Layout */
+/* GALLERY GRID (OFFICIAL CSS GRID USAGE) */
 
 .gallery {
-    column-count: 4;
-    column-gap: 15px;
-    padding: 30px 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 50px 100px;
 }
 
-.gallery-item {
-    break-inside: avoid;
-    margin-bottom: 15px;
-    position: relative;
-        width: 100%;
-    height: auto;
-    max-height: 600px; /* prevents giant vertical images */
-    object-fit: cover;
-}
+/* STANDARD IMAGE SIZE */
 
 .gallery-item img {
     width: 100%;
-    border-radius: 8px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 6px;
     transition: 0.3s ease;
 }
 
 .gallery-item img:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
-/* Responsive */
+/* TABLE PAGE */
 
-@media (max-width: 1200px) {
-    .gallery { column-count: 3; }
+table {
+    width: 80%;
+    margin: 60px auto;
+    border-collapse: collapse;
 }
 
-@media (max-width: 800px) {
-    .gallery { column-count: 2; }
+th, td {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
 }
 
-@media (max-width: 500px) {
-    .gallery { column-count: 1; padding: 20px; }
+th {
+    background-color: #eae3d2;
+}
+
+
+.content {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.text-block h2 {
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.text-block p {
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
